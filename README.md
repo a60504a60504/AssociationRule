@@ -1,0 +1,2 @@
+# AssociationRule
+BruteForce/Apriori/FPgrowth
