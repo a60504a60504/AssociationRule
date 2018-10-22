@@ -1,4 +1,4 @@
-# AssociationRule
+# AssociationRule of Frequent itemsets
 BruteForce/Apriori/FPgrowth
 
 ## 編譯環境:Anacoda2_spyder(python 2.7)
@@ -18,6 +18,15 @@ BruteForce/Apriori/FPgrowth
 
 ### BruteForce.py
 * 使用暴力法取得Frequent itemsets
+* 使用AR.data輸出結果
+ * ![](https://i.imgur.com/XDLDDG9.png)
 
 ### Apriori.py
 * 使用剪枝方法加快取得Frequent itemsets
+* 使用AR.data輸出結果
+ * ![](https://i.imgur.com/BvVUPGt.png)
+
+### FPgrowth.py
+* 使用FPtree來計算Frequent itemsets
+* 使用AR.data輸出結果
+ * ![](https://i.imgur.com/7F8V4dW.png)
