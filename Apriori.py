@@ -27,9 +27,12 @@ def Apriori(TransactionDF, Itemset, minsup):
                         sup = GetSupport(item_X,TransactionDF)
                         if sup >= minsup:
                                 newItemset.update(item_X)
-                                Freq_itemsets.append(item_X)
-                                print item_X,sup
+                                item_X_list = []
+                                for idx in range(len(item_X)):
+                                        item_X_list.append(item_X.pop())
+                                Freq_itemsets.append((item_X_list,sup))
                 Itemset = newItemset
+        Freq_itemsets.sort()
         return Freq_itemsets
 
 def DataInput():
@@ -46,6 +49,8 @@ if __name__ == "__main__":
         
         df,Itemset = DataInput()
         FI = Apriori(df,Itemset,0.15)
+        for itemset, support in FI:
+            print str(itemset) + ' ' + str(support)
         
         tEnd = time.time()
         print "It cost %f sec" % (tEnd - tStart)

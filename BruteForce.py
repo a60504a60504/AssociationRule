@@ -25,8 +25,8 @@ def BruteForce(TransactionDF, Itemset, minsup):
                         item_X = set(item_X)
                         sup = GetSupport(item_X,TransactionDF)
                         if sup >= minsup:
-                                Freq_itemsets.append(item_X)
-                                print item_X,sup
+                                Freq_itemsets.append((item_X,sup))
+        Freq_itemsets.sort()
         return Freq_itemsets
 
 def DataInput():
@@ -43,6 +43,8 @@ if __name__ == "__main__":
         
         df,Itemset = DataInput()
         FI = BruteForce(df,Itemset,0.15)
+        for itemset, support in FI:
+            print str(itemset) + ' ' + str(support)
         
         tEnd = time.time()
         print "It cost %f sec" % (tEnd - tStart)
