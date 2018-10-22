@@ -18,15 +18,18 @@ def GetSupport(item,TransactionDF):
         return float(Support)/TransactionDF.index.max()
 
 
-def BruteForce(TransactionDF, Itemset, minsup):
+def Apriori(TransactionDF, Itemset, minsup):
         Freq_itemsets = []
         for nE in range(1,len(Itemset)+1):
+                newItemset = set()
                 for item_X in findsubsets(Itemset,nE):
                         item_X = set(item_X)
                         sup = GetSupport(item_X,TransactionDF)
                         if sup >= minsup:
+                                newItemset.update(item_X)
                                 Freq_itemsets.append(item_X)
                                 print item_X,sup
+                Itemset = newItemset
         return Freq_itemsets
 
 def DataInput():
@@ -42,7 +45,7 @@ if __name__ == "__main__":
         tStart = time.time()
         
         df,Itemset = DataInput()
-        FI = BruteForce(df,Itemset,0.15)
+        FI = Apriori(df,Itemset,0.15)
         
         tEnd = time.time()
         print "It cost %f sec" % (tEnd - tStart)
