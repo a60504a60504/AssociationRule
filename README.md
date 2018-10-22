@@ -18,3 +18,6 @@ BruteForce/Apriori/FPgrowth
 
 ### BruteForce.py
 * 使用暴力法取得Frequent itemsets
+
+### Aprori.py
+* 使用剪枝方法加快取得Frequent itemsets
