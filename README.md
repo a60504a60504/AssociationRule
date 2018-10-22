@@ -24,7 +24,7 @@ BruteForce/Apriori/FPgrowth
 ### BruteForce.py
 * 使用暴力法取得Frequent itemsets
 * 使用AR.data輸出結果
-![](https://i.imgur.com/XDLDDG9.png)
+!![](https://i.imgur.com/BKq1abY.png)
 
 ### Apriori.py
 * 使用剪枝方法加快取得Frequent itemsets
