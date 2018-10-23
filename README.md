@@ -35,3 +35,9 @@ BruteForce/Apriori/FPgrowth
 * 使用FPtree來計算Frequent itemsets
 * 使用AR.data輸出結果
 ![](https://i.imgur.com/7F8V4dW.png)
+
+### 結果分析
+| BruteForce    | Apriori       | FPgrowth      |
+|:-------------:|:-------------:|:-------------:|
+| ARdata:2~3mins| ARdata:4s     | ARdata:0.17s  |
+就結果而言明顯在小的itemset裡面，FPgrowth效率較佳
