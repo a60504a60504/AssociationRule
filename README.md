@@ -40,4 +40,4 @@ BruteForce/Apriori/FPgrowth
 | BruteForce    | Apriori       | FPgrowth      |
 |:-------------:|:-------------:|:-------------:|
 | ARdata:2~3mins| ARdata:4s     | ARdata:0.17s  |
-就結果而言明顯在小的itemset裡面，FPgrowth效率較佳
+* 就結果而言明顯在小的itemset裡面，FPgrowth效率較佳
