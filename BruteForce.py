@@ -25,7 +25,10 @@ def BruteForce(TransactionDF, Itemset, minsup):
                         item_X = set(item_X)
                         sup = GetSupport(item_X,TransactionDF)
                         if sup >= minsup:
-                                Freq_itemsets.append((item_X,sup))
+                                item_X_list = []
+                                for idx in range(len(item_X)):
+                                        item_X_list.append(item_X.pop())
+                                Freq_itemsets.append((item_X_list,sup))
         Freq_itemsets.sort()
         return Freq_itemsets
 
